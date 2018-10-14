@@ -1,3 +1,14 @@
+///////////////// [ donate spin animation ] //////////////
+
+function makeShake() {
+  $(".donate").removeClass("hide");
+  $(".donate").addClass("flip");
+}
+
+setInterval(makeShake, 1500)
+
+////////////////// [ quote slideshow] /////////////////////
+
 const quotesDiv = $(".quotes");
 
 const quotes = [
@@ -17,14 +28,6 @@ function changeText() {
   }
 
   setInterval(changeText, 8000);
-
-  function makeShake() {
-      $(".donate").removeClass("hide");
-      $(".donate").addClass("flip");
-  }
-
-  setInterval(makeShake, 1500)
-
 
 ////// [ form script ] ////////
 
@@ -63,7 +66,7 @@ $(document).ready(function() {
 
 ////////////// [ prayer times ] /////////////////////
 
-// un-comment !!!!!!!
+// un-comment before going live
 
 // var API_KEY = "f7a9d9d54358c3cd93b834ec60d1d8be";
 
