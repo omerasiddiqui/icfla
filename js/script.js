@@ -18,8 +18,15 @@ function changeText() {
 
   setInterval(changeText, 8000);
 
+  function makeShake() {
+      $(".donate").removeClass("hide");
+      $(".donate").addClass("flip");
+  }
 
-////// [form script] ////////
+  setInterval(makeShake, 1500)
+
+
+////// [ form script ] ////////
 
 var $input;
 
@@ -54,10 +61,12 @@ $(document).ready(function() {
 
 });
 
+////////////// [ prayer times ] /////////////////////
+
 var API_KEY = "f7a9d9d54358c3cd93b834ec60d1d8be";
 
 jQuery(function($) {
-    $.getJSON('http://muslimsalat.com/denver/daily.json?key=API_KEY&jsoncallback=?', function (times)
+    $.getJSON('http://muslimsalat.com/monroe/daily.json?key=API_KEY&jsoncallback=?', function (times)
     {
         console.log(times);
         $('.prayerTimes')
@@ -69,3 +78,4 @@ jQuery(function($) {
         .append('<p> Isha: ' +times.items[0].isha + "</p>")
     });
 });
+

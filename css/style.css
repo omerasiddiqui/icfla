@@ -228,10 +228,18 @@ header {
 .charity {
   color: #ffcc00; }
 
+.hide {
+  opacity: 0; }
+
+.donate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .donate {
   width: 200px;
   height: 60px;
-  background-color: #6a7989;
+  background-color: transparent;
   color: #000;
   border: 0;
   font-weight: bold;
@@ -244,7 +252,11 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 1%;
-  border: 2px solid #ffcc00; }
+  border: 2px solid #ffcc00;
+  transition: 0.8s ease;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 4em; }
 
 .donate:hover,
 .donate:focus {
@@ -252,7 +264,37 @@ header {
   background-color: #ffcc00;
   color: #000;
   -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s; }
+  transition: transform 0.3s;
+  transition: 0.2s ease; }
+
+.about {
+  display: flex;
+  padding: 5% 0%;
+  margin: 0 5%;
+  border-bottom: 1px solid white;
+  z-index: 30; }
+
+.about-heading {
+  display: inline-block; }
+
+.about-left, .about-right {
+  height: 60vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.about-left {
+  width: 30%; }
+
+.about-right {
+  width: 70%;
+  flex-direction: column;
+  letter-spacing: 2px; }
+  .about-right p {
+    padding: 0 10%;
+    line-height: 1.55; }
 
 *,
 *:after,
@@ -310,8 +352,7 @@ textarea {
   color: #ffcc00;
   font-size: 1.55em;
   font-weight: bold;
-  -webkit-appearance: none;
-  /* for box shadows to show on iOS */ }
+  -webkit-appearance: none; }
 
 .input__field:focus {
   outline: none; }
@@ -395,6 +436,18 @@ textarea {
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s; }
 
+.prayerTimes {
+  border: 2px solid #ffcc00;
+  display: inline-block;
+  padding: 1% 15%;
+  font-size: 1.4rem; }
+
+.prayerTimesWrapper {
+  text-align: center;
+  margin-bottom: 6%;
+  width: 95%;
+  display: initial; }
+
 .footer {
   bottom: 0;
   background: linear-gradient(to bottom, #000000, #313232);
@@ -404,12 +457,3 @@ textarea {
   margin: 0; }
   .footer p {
     margin: 0; }
-
-.prayerTimes {
-  border: 2px solid #ffcc00;
-  display: inline-block;
-  padding: 2% 15%; }
-
-.prayerTimesWrapper {
-  text-align: center;
-  margin-bottom: 6%; }

@@ -1,10 +1,13 @@
 .prayerTimes {
     border: 2px solid $gold;
     display: inline-block;
-    padding: 2% 15%;
+    padding: 1% 15%;
+    font-size: 1.4rem;
 }
 
 .prayerTimesWrapper {
     text-align: center;
     margin-bottom: 6%;
+    width: 95%;
+    display: initial;
 }

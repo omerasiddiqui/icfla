@@ -43,28 +43,20 @@ header {
     color: $gold;
 }
 
-// .donate {
-//     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-//                 radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-//     border-radius: 5px;
-//     color: floralwhite;
-//     padding: 1% 2%;
-//     font-size: 1.0rem;
-//     text-decoration: none;
-//     font-family: $heading-font;
-//     border: 0.2px solid transparent;
-//   }
+.hide {
+    opacity: 0;
+}
 
-// .donate:hover {
-//     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 100%),
-//     radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 9%, #D1B464 27%, #5d4a1f 62.5%, #5d4a1f 30%); 
-//     text-decoration: underline;
-// }
+.donate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .donate {
     width: 200px;
     height: 60px;
-    background-color: #6a7989;
+    background-color: transparent;
     color: #000;
     border: 0;
     font-weight: bold;
@@ -78,15 +70,18 @@ header {
     align-items: center;
     margin-top: 1%;
     border: 2px solid $gold;
-  }
-  
-  .donate:hover,
-  .donate:focus {
+    transition: 0.8s ease;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 4em;
+}
+
+.donate:hover,
+.donate:focus {
     outline: 0;
     background-color: #ffcc00;
     color: #000;
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
-  }
-
-
+    transition: 0.2s ease;
+}

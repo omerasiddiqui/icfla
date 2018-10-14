@@ -32,7 +32,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  // margin-top: 88%;
 }
 
 .input {
@@ -64,7 +63,7 @@ textarea {
   color: $gold;
   font-size: 1.55em;
   font-weight: bold;
-  -webkit-appearance: none;/* for box shadows to show on iOS */
+  -webkit-appearance: none;
 }
 
 .input__field:focus {
@@ -119,19 +118,19 @@ textarea {
   bottom: 0;
 }
 
-.input__field:focus + .input__label .input__label-content,
+.input__field:focus+.input__label .input__label-content,
 .input--filled .input__label-content {
   -webkit-transform: translate3d(0, -90%, 0);
   transform: translate3d(0, -90%, 0);
 }
 
-.input__field:focus + .input__label::before,
+.input__field:focus+.input__label::before,
 .input--filled .input__label::before {
   -webkit-transform: translate3d(0, -0.5em, 0);
   transform: translate3d(0, -0.5em, 0);
 }
 
-.input__field:focus + .input__label::after,
+.input__field:focus+.input__label::after,
 .input--filled .input__label::after {
   -webkit-transform: translate3d(0, 0.5em, 0);
   transform: translate3d(0, 0.5em, 0);
@@ -158,21 +157,4 @@ textarea {
   color: #000;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-}
-
-
-
-
-
-
-.footer {
-    bottom: 0;
-    background: linear-gradient(to bottom, #000000, #313232);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin: 0;
-    p {
-      margin: 0;
-    }
 }
