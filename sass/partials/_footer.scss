@@ -10,3 +10,19 @@
       margin: 0;
     }
   }
+
+  @media (max-width: $large-screen) {
+
+  }
+  
+  @media (max-width: $medium-screen) {
+      .footer {
+        font-size: 0.9rem;
+      }
+  }
+  
+  @media (max-width: $small-screen) {
+      .footer {
+        font-size: 0.6rem;
+      }
+  }

@@ -6,6 +6,14 @@ header {
     padding: 1px;
 }
 
+.header-text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .heading-text {
     display: inline-block;
     margin: 0 auto;
@@ -18,14 +26,6 @@ header {
     text-shadow: 2px 3px 1px $black;
     text-align: center;
     text-transform: uppercase;
-}
-
-.header-text-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .quotes {
@@ -79,4 +79,28 @@ header {
     transition: transform 0.3s;
     transition: 0.2s ease;
     -webkit-transition: -webkit-transform 0.3s;
+}
+
+// media queries
+
+@media (max-width: $large-screen) {
+    .quotes {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: $medium-screen) {
+    .heading-text {
+        font-size: 4rem;
+        padding: 2% 0 2px 0;
+    } 
+
+
+}
+
+@media (max-width: $small-screen) {
+    .heading-text {
+        font-size: 3rem;
+    }
+    
 }

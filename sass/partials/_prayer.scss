@@ -11,3 +11,23 @@
     margin-bottom: 6%;
     text-align: center;
 }
+
+@media (max-width: $large-screen) {
+
+}
+
+@media (max-width: $medium-screen) {
+    .prayerTimes {
+        font-size: 2rem;
+        padding: 1% 2%;
+        width: 90%;
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: $small-screen) {
+    .prayerTimes {
+        font-size: 1.5rem;
+    }
+    
+}
