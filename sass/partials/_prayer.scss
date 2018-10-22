@@ -1,0 +1,59 @@
+.prayerTimes {
+    display: inline-block;
+    width: 90vw;
+    border: 2px solid $gold;
+    font-size: 1.4rem;
+}
+
+.prayerTimesWrapper {
+    display: initial;
+    margin-bottom: 6%;
+    text-align: center;
+    width: 100%;
+}
+
+.prayerTimesMonroe {
+    display: inline-block;
+    padding: 1% 15%;
+    border: 2px solid $gold;
+    font-size: 1.4rem;
+}
+
+#map {
+    height: 35vh;
+}
+
+@media (max-width: $large-screen) {
+
+}
+
+@media (max-width: $medium-screen) {
+    .prayerTimes {
+        font-size: 2rem;
+        padding: 1% 2%;
+        width: 90%;
+        margin-top: 5%;
+    }
+    .prayerTimesMonroe {
+        font-size: 2rem;
+        padding: 1% 2%;
+        width: 90%;
+        margin-top: 5%;
+    }
+    .prayerTimesWrapper {
+        width: 100%;
+    }
+    #map {
+        width: 100%;
+    }
+}
+
+@media (max-width: $small-screen) {
+    .prayerTimes {
+        font-size: 1.5rem;
+    }
+    .prayerTimesMonroe {
+        font-size: 1.5rem;
+    }
+
+}
