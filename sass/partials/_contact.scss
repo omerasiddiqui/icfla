@@ -159,6 +159,12 @@ textarea {
   transition: transform 0.3s;
 }
 
+.contact-mobile {
+  display: none;
+}
+
+// media queries
+
 @media (max-width: $large-screen) {
 
 }
@@ -181,25 +187,31 @@ textarea {
       width: 300px;
       height: 90px;
     }
+
+    .outer-container {
+      display: none;
+    }
+  
+    .contact-mobile {
+      display: block;
+    }
+  
+    .email-text-contact {
+      padding: 0 2%;
+      color: white;
+      font-size: 1.6rem;
+      text-align: center;
+      transition: 0.3s ease;
+      width: 82%;
+      margin: 1.3em auto;
+      color: white;
+      border-bottom: 2px solid white;
+      a {
+        color: white;
+      }
+    }
 }
 
 @media (max-width: $small-screen) {
-  .outer-container {
-    display: none;
-  }
-
-  .heading-text-contact {
-    padding: 0 2%;
-    color: white;
-    font-size: 2.5rem;
-    text-align: center;
-    transition: 0.3s ease;
-    width: 90%;
-    margin: 1.3em auto;
-  }
-
-  .heading-text-contact {
-    border-bottom: 2px solid white;
-  }
     
 }

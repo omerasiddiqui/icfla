@@ -26,6 +26,7 @@ header {
     text-shadow: 2px 3px 1px $black;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .quotes {
@@ -102,5 +103,12 @@ header {
     .heading-text {
         font-size: 3rem;
     }
-    
+
+    .donate {
+        color: white;
+    }
+
+    .quotes {
+        text-align: center;
+    }
 }

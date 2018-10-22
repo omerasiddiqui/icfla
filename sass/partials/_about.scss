@@ -1,5 +1,8 @@
 .about {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 30;
     padding: 5% 0%;
     margin: 0 5%;
@@ -19,17 +22,46 @@
 }
 
 .about-left {
-    width: 30%;
+    width: 100%;
+    order: 2;
 }
 
 .about-right {
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     letter-spacing: 2px;
     p {
         padding: 0 10%;
         line-height: 1.55;
     }
+}
+
+.white {
+    color: white;
+}
+
+.prayerQuote {
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: $gold;
+    font-size: 1.6rem;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 12px 27px;
+    box-shadow: 3px 3px 1px gold,
+                3px 3px 5px white,
+                3px 3px 2px gold;
+}
+
+.about-content:nth-of-type(2) {
+    margin: 4% auto;
+}
+
+#st-1 .st-btn {
+    padding: 9px 30px 8px 19px !important;
+    height: 52px !important;
+    width: 52px !important;
+    border-radius: 35px !important;
 }
 
 
@@ -48,10 +80,6 @@
     .about-left {
         order: 2;
         width: 100%;
-        h3 {
-            width: 100%;
-            margin: 0 auto;
-        }
     }
 
     .about-right {
@@ -61,13 +89,24 @@
             font-size: 1.3rem;
         }
     }
+    .prayerQuote {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: $small-screen) {
     .about-right {
+        letter-spacing: 1px;
         p{
             font-size: 1.1rem;
         }
     }
-    
+    .prayerQuote {
+        font-size: 0.6rem;
+        box-shadow: none;
+        border: none;
+        border: 1px solid white;
+        padding: 9px;
+    }
+
 }

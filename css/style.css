@@ -213,7 +213,8 @@ header {
   font-size: 3.0rem;
   text-shadow: 2px 3px 1px #1c1e2f;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 1.5px; }
 
 .quotes {
   position: absolute;
@@ -266,17 +267,24 @@ header {
   .quotes {
     font-size: 1.3rem; } }
 
-@media (max-width: 600px) {
+@media (max-width: 775px) {
   .heading-text {
     font-size: 4rem;
     padding: 2% 0 2px 0; } }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .heading-text {
-    font-size: 3rem; } }
+    font-size: 3rem; }
+  .donate {
+    color: white; }
+  .quotes {
+    text-align: center; } }
 
 .about {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 30;
   padding: 5% 0%;
   margin: 0 5%;
@@ -293,17 +301,40 @@ header {
   text-align: center; }
 
 .about-left {
-  width: 30%; }
+  width: 100%;
+  order: 2; }
 
 .about-right {
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   letter-spacing: 2px; }
   .about-right p {
     padding: 0 10%;
     line-height: 1.55; }
 
-@media (max-width: 600px) {
+.white {
+  color: white; }
+
+.prayerQuote {
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #ffcc00;
+  font-size: 1.6rem;
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 12px 27px;
+  box-shadow: 3px 3px 1px gold, 3px 3px 5px white, 3px 3px 2px gold; }
+
+.about-content:nth-of-type(2) {
+  margin: 4% auto; }
+
+#st-1 .st-btn {
+  padding: 9px 30px 8px 19px !important;
+  height: 52px !important;
+  width: 52px !important;
+  border-radius: 35px !important; }
+
+@media (max-width: 775px) {
   .about {
     padding-bottom: 10%;
     flex-direction: column;
@@ -312,40 +343,67 @@ header {
   .about-left {
     order: 2;
     width: 100%; }
-    .about-left h3 {
-      width: 100%;
-      margin: 0 auto; }
   .about-right {
     width: 90%; }
     .about-right p {
       padding: 0;
-      font-size: 1.3rem; } }
+      font-size: 1.3rem; }
+  .prayerQuote {
+    font-size: 1.3rem; } }
 
-@media (max-width: 375px) {
-  .about-right p {
-    font-size: 1.1rem; } }
+@media (max-width: 450px) {
+  .about-right {
+    letter-spacing: 1px; }
+    .about-right p {
+      font-size: 1.1rem; }
+  .prayerQuote {
+    font-size: 0.6rem;
+    box-shadow: none;
+    border: none;
+    border: 1px solid white;
+    padding: 9px; } }
 
 .prayerTimes {
   display: inline-block;
-  padding: 1% 15%;
+  width: 90vw;
   border: 2px solid #ffcc00;
   font-size: 1.4rem; }
 
 .prayerTimesWrapper {
   display: initial;
-  width: 95%;
   margin-bottom: 6%;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
 
-@media (max-width: 600px) {
+.prayerTimesMonroe {
+  display: inline-block;
+  padding: 1% 15%;
+  border: 2px solid #ffcc00;
+  font-size: 1.4rem; }
+
+#map {
+  height: 35vh; }
+
+@media (max-width: 775px) {
   .prayerTimes {
     font-size: 2rem;
     padding: 1% 2%;
     width: 90%;
-    margin-top: 5%; } }
+    margin-top: 5%; }
+  .prayerTimesMonroe {
+    font-size: 2rem;
+    padding: 1% 2%;
+    width: 90%;
+    margin-top: 5%; }
+  .prayerTimesWrapper {
+    width: 100%; }
+  #map {
+    width: 100%; } }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .prayerTimes {
+    font-size: 1.5rem; }
+  .prayerTimesMonroe {
     font-size: 1.5rem; } }
 
 *,
@@ -488,7 +546,10 @@ textarea {
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s; }
 
-@media (max-width: 600px) {
+.contact-mobile {
+  display: none; }
+
+@media (max-width: 775px) {
   .contact {
     padding-top: 5%; }
   .input {
@@ -497,21 +558,23 @@ textarea {
     width: 75%; }
   #send-button {
     width: 300px;
-    height: 90px; } }
-
-@media (max-width: 375px) {
+    height: 90px; }
   .outer-container {
     display: none; }
-  .heading-text-contact {
+  .contact-mobile {
+    display: block; }
+  .email-text-contact {
     padding: 0 2%;
     color: white;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     text-align: center;
     transition: 0.3s ease;
-    width: 90%;
-    margin: 1.3em auto; }
-  .heading-text-contact {
-    border-bottom: 2px solid white; } }
+    width: 82%;
+    margin: 1.3em auto;
+    color: white;
+    border-bottom: 2px solid white; }
+    .email-text-contact a {
+      color: white; } }
 
 .footer {
   bottom: 0;
@@ -519,14 +582,19 @@ textarea {
   color: white;
   text-align: center;
   padding: 10px 0;
-  margin: 0; }
+  margin: 0;
+  margin-top: 5%; }
   .footer p {
     margin: 0; }
 
-@media (max-width: 600px) {
-  .footer {
-    font-size: 0.9rem; } }
+.omer {
+  color: grey; }
 
-@media (max-width: 375px) {
+@media (max-width: 775px) {
+  .footer {
+    font-size: 0.9rem;
+    margin-top: 0; } }
+
+@media (max-width: 450px) {
   .footer {
     font-size: 0.6rem; } }
