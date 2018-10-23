@@ -82,6 +82,15 @@ header {
     -webkit-transition: -webkit-transform 0.3s;
 }
 
+.amazonPay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+   
+
 // media queries
 
 @media (max-width: $large-screen) {
